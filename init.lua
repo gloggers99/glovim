@@ -20,6 +20,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 
 require("lazy").setup({
+    -- QOL
 	{ "windwp/nvim-autopairs", event = "InsertEnter", opts = {} },
 
     -- Utilities (windows and such)
@@ -28,6 +29,12 @@ require("lazy").setup({
     { "nvim-tree/nvim-web-devicons" },
     { "akinsho/toggleterm.nvim", version = "*", config = true},
     { "stevearc/aerial.nvim", opts = { layout = { min_width = 30 } }, dependencies = { "nvim-treesitter/nvim-treesitter" } },
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function() vim.fn["mkdp#util#install"]() end,
+    },
 
     -- LSP plugins
     { "j-hui/fidget.nvim", opts = {}, }, -- doesn't seem to work with mason-installed servers

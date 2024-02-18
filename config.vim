@@ -23,6 +23,7 @@ set foldlevel=0
 nnoremap <leader>of :NvimTreeToggle<CR>
 nnoremap <leader>ot :ToggleTerm<CR>
 nnoremap <leader>oa :AerialToggle<CR>
+nnoremap <leader>om :MarkdownPreview<CR>
 
 " autocmd
 autocmd FileType c,cpp :AerialToggle
