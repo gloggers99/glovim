@@ -129,4 +129,4 @@ cmp.setup.cmdline(":", {
 })
 
 -- General vim configuration using vimscript because lua is hot garbage
-vim.cmd("source config.vim")
+vim.cmd("source ~/.config/nvim/config.vim")
