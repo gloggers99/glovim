@@ -75,6 +75,7 @@ require("lazy").setup({
     { "hrsh7th/nvim-cmp" },
     { "hrsh7th/cmp-vsnip" },
     { "hrsh7th/vim-vsnip" },
+    { "folke/trouble.nvim", opts = {} },
 
     -- Pretty plugins
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },

@@ -24,6 +24,9 @@ nnoremap <leader>of :NvimTreeToggle<CR>
 nnoremap <leader>ot :ToggleTerm<CR>
 nnoremap <leader>oa :AerialToggle<CR>
 nnoremap <leader>om :MarkdownPreview<CR>
+nnoremap <leader>od :TroubleToggle<CR>
+
+nnoremap <leader><CR> :Trouble quickfix<CR>
 
 " autocmd
 autocmd FileType c,cpp :AerialToggle
