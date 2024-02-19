@@ -26,7 +26,6 @@ require("lazy").setup({
     -- Utilities (windows and such)
     { "folke/which-key.nvim", opts = {} },
     { "nvim-tree/nvim-tree.lua", lazy = false, opts = {} },
-    { "nvim-tree/nvim-web-devicons" },
     { "akinsho/toggleterm.nvim", version = "*", config = true},
     { "stevearc/aerial.nvim", opts = { layout = { min_width = 30 } }, dependencies = { "nvim-treesitter/nvim-treesitter" } },
     {
@@ -35,6 +34,21 @@ require("lazy").setup({
         ft = { "markdown" },
         build = function() vim.fn["mkdp#util#install"]() end,
     },
+    {
+        'romgrk/barbar.nvim',
+        dependencies = {
+          'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+          'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+        },
+        init = function() vim.g.barbar_auto_setup = false end,
+        opts = {
+          -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+          -- animation = true,
+          -- insert_at_start = true,
+          -- …etc.
+        }
+    },
+    { "nvim-lualine/lualine.nvim", opts = { options = { component_separators = { left = "", right = "" }, section_separators = { left = "", right = "" } } } },
 
     -- LSP plugins
     { "j-hui/fidget.nvim", opts = {}, }, -- doesn't seem to work with mason-installed servers
@@ -64,6 +78,7 @@ require("lazy").setup({
 
     -- Pretty plugins
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    { "nvim-tree/nvim-web-devicons" },
     { "nvchad/nvim-colorizer.lua", opts = {} },
     { "pseewald/vim-anyfold" },
     { "anuvyklack/pretty-fold.nvim", opts = {} },
